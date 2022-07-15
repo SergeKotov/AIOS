@@ -6,11 +6,12 @@
 //
 
 let nim = Nim()
+
 let players = [
-    NimPlayer(name: "Steve", nim: nim),
-    NimPlayer(name: "Bill", nim: nim),
+    NimPlayer(name: "Steve"),
+    NimPlayer(name: "Bill"),
 ]
 
-let strangerThings = GameClub(players: players, game: nim)
+let strangerThings = GameClub(players: players)
 strangerThings.runSeason()
 

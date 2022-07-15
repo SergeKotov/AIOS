@@ -21,9 +21,14 @@ class Player {
 }
 
 class NimPlayer: Player {
-    var nim: Nim
+    var nim: Nim?
     
     override func turn() {
+        guard let nim = nim else {
+            print("The game not loaded")
+            exit(1)
+        }
+        
         var nonEmptyHeaps = nim.heaps.filter { heap in heap != 0 }
         if nonEmptyHeaps.isEmpty {
             print("\(name) lost")
@@ -37,19 +42,19 @@ class NimPlayer: Player {
             nim.heaps = nonEmptyHeaps
         }
     }
-    
-    init(name: String, nim: Nim) {
-        self.nim = nim
-        super.init(name: name)
-    }
 }
 
 struct GameClub {
-    var players: [Player]
-    let game: Nim
+    var players: [NimPlayer]
+    let game = Nim()
     
     func runSeason() {
         print("Nim game\n")
+        
+        for player in players {
+            player.nim = game
+        }
+        
         while true {
             for player in players {
                 print(game.heaps)
