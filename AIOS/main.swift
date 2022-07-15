@@ -5,7 +5,12 @@
 //  Created by Serge Kotov on 15.07.2022.
 //
 
-import Foundation
+let nim = Nim()
+let players = [
+    NimPlayer(name: "Steve", nim: nim),
+    NimPlayer(name: "Bill", nim: nim),
+]
 
-print("Hello, World!")
+let strangerThings = GameClub(players: players, game: nim)
+strangerThings.runSeason()
 

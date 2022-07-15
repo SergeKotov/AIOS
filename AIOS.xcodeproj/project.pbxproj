@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		363C6AC22881ACDA00E49CA4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6AC12881ACDA00E49CA4 /* main.swift */; };
+		363C6AC92881AD7300E49CA4 /* 01_NimGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6AC82881AD7300E49CA4 /* 01_NimGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		363C6ABE2881ACDA00E49CA4 /* AIOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AIOS; sourceTree = BUILT_PRODUCTS_DIR; };
 		363C6AC12881ACDA00E49CA4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		363C6AC82881AD7300E49CA4 /* 01_NimGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 01_NimGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				363C6AC12881ACDA00E49CA4 /* main.swift */,
+				363C6AC82881AD7300E49CA4 /* 01_NimGame.swift */,
 			);
 			path = AIOS;
 			sourceTree = "<group>";
@@ -121,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				363C6AC22881ACDA00E49CA4 /* main.swift in Sources */,
+				363C6AC92881AD7300E49CA4 /* 01_NimGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
