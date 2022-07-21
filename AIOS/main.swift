@@ -5,39 +5,58 @@
 //  Created by Serge Kotov on 15.07.2022.
 //
 
-struct Person {
-    let name: String
-    let age: Int
+// create agents
+let agentCount = 1200
+var agents: [Int: Agent] = [:]
+agents.reserveCapacity(agentCount)
+for id in 0..<agentCount {
+    switch id % 3 {
+    case 0: agents[id] = SteadyAgent()
+    case 1: agents[id] = RandomAgent()
+    default: agents[id] = LearningAgent()
+    }
 }
 
-let people = [
-    Person(name: "Steve", age: 33),
-    Person(name: "Bill", age: 31),
-    Person(name: "Ada", age: 55),
-    Person(name: "Jon", age: 45),
-    Person(name: "Anna", age: 18)
-]
+// run battle
+var battleCount = 100_000
+while battleCount > 0, agents.count > 1 {
+    let first = agents.randomElement()!
+    let second = agents.randomElement()!
+    first.value.act(versus: second.value) // the first attacks
 
-let swiftProgrammers = people.map { person in Programmer(name: person.name, age: person.age) }
+    // handle battle result
+    if first.value.defeated > 3 {
+        agents[first.key] = nil
+    }
+    if second.value.defeated > 3 {
+        agents[second.key] = nil
+    }
 
-//var swiftProgrammers = [Programmer]()
-//for guy in people {
-//    let programmer = Programmer(name: guy.name, age: guy.age)
-//    swiftProgrammers.append(programmer)
-//}
-
-for programmer in swiftProgrammers {
-    print("CV programmer \(programmer.name)")
-    print(programmer.cv ?? "none\n")
+    battleCount -= 1
 }
 
-// get the best candiadte to the dream company
-var dreamCompany = Company(candidates: [])
-dreamCompany.getCandidates(people: swiftProgrammers)
+for winner in agents.values {
+    print("Winner: \(winner.self) shape: \(winner.shape) wins: \(winner.wins) defeated: \(winner.defeated)")
+}
+print()
 
-if let newProgrammer = dreamCompany.fillVacancy(minRating: 12) {
-    print("\nCongratulations \(newProgrammer.name)!\nWelcome to the board!\n\n")
-} else {
-    print("No such candidate!\n")
+
+/*
+let wordLog = ["GHbdtn", "Hello", nil, nil, "ПРювет"]
+
+var upperWorlds: [String] = []
+for word in wordLog {
+    if word != nil {
+        let WORD = word!.uppercased()
+        upperWorlds.append(WORD)
+    }
 }
 
+let filtered = wordLog.compactMap { $0?.uppercased() }
+                      .filter { $0.first == "H"}
+
+print(upperWorlds)
+print(filtered)
+print()
+print()
+*/
