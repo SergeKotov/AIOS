@@ -5,58 +5,41 @@
 //  Created by Serge Kotov on 15.07.2022.
 //
 
-// create agents
-let agentCount = 1200
-var agents: [Int: Agent] = [:]
-agents.reserveCapacity(agentCount)
-for id in 0..<agentCount {
-    switch id % 3 {
-    case 0: agents[id] = SteadyAgent()
-    case 1: agents[id] = RandomAgent()
-    default: agents[id] = LearningAgent()
+var counter = 1
+var wrongAnswers = 0
+
+print("Welcome to the Dream Company Greenhorn Swift developer test!")
+
+while counter < 10, wrongAnswers < 4 {
+    print("\n\n> Round \(counter)\n")
+
+    print(guess[counter].value.0)
+    print(guess[counter].value.1)
+    print("\n> What will be printed?")
+
+    let guessAnswer = guess[counter].value.2
+    let answer = readLine()?.lowercased()
+                            .trimmingCharacters(in: .whitespacesAndNewlines)
+    if answer == guessAnswer {
+        print(GoodAnswer.allCases.randomElement()!.rawValue)
+    } else {
+        wrongAnswers += 1
+        print("Wrong, the right answer is: '\(guessAnswer)'")
     }
+    let _ = readLine()
+    
+    counter += 1
 }
 
-// run battle
-var battleCount = 100_000
-while battleCount > 0, agents.count > 1 {
-    let first = agents.randomElement()!
-    let second = agents.randomElement()!
-    first.value.act(versus: second.value) // the first attacks
-
-    // handle battle result
-    if first.value.defeated > 3 {
-        agents[first.key] = nil
-    }
-    if second.value.defeated > 3 {
-        agents[second.key] = nil
-    }
-
-    battleCount -= 1
+// check test result
+print("\nYour result is \(counter - wrongAnswers) from \(counter)")
+switch wrongAnswers {
+case 0...2:
+    print("Excellent! Welcome to the board!")
+case 3...4:
+    print("Try once more in next year.")
+default:
+    print("👺")
 }
+print("\n")
 
-for winner in agents.values {
-    print("Winner: \(winner.self) shape: \(winner.shape) wins: \(winner.wins) defeated: \(winner.defeated)")
-}
-print()
-
-
-/*
-let wordLog = ["GHbdtn", "Hello", nil, nil, "ПРювет"]
-
-var upperWorlds: [String] = []
-for word in wordLog {
-    if word != nil {
-        let WORD = word!.uppercased()
-        upperWorlds.append(WORD)
-    }
-}
-
-let filtered = wordLog.compactMap { $0?.uppercased() }
-                      .filter { $0.first == "H"}
-
-print(upperWorlds)
-print(filtered)
-print()
-print()
-*/

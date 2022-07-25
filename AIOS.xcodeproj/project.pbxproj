@@ -12,6 +12,7 @@
 		363C6AC92881AD7300E49CA4 /* 01_NimGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6AC82881AD7300E49CA4 /* 01_NimGame.swift */; };
 		363C6ACB28829D7200E49CA4 /* 02_Candidates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6ACA28829D7200E49CA4 /* 02_Candidates.swift */; };
 		363C6ACD2882B54500E49CA4 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6ACC2882B54500E49CA4 /* Library.swift */; };
+		36A9481F288EC3F40049B24B /* 04_CodeExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9481E288EC3F40049B24B /* 04_CodeExam.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		363C6AC82881AD7300E49CA4 /* 01_NimGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 01_NimGame.swift; sourceTree = "<group>"; };
 		363C6ACA28829D7200E49CA4 /* 02_Candidates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 02_Candidates.swift; sourceTree = "<group>"; };
 		363C6ACC2882B54500E49CA4 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		36A9481E288EC3F40049B24B /* 04_CodeExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 04_CodeExam.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				363C6AC82881AD7300E49CA4 /* 01_NimGame.swift */,
 				363C6ACA28829D7200E49CA4 /* 02_Candidates.swift */,
 				3628D5A12886B05B00FF4E40 /* 03_Mutants.swift */,
+				36A9481E288EC3F40049B24B /* 04_CodeExam.swift */,
 				363C6ACC2882B54500E49CA4 /* Library.swift */,
 			);
 			path = AIOS;
@@ -135,6 +138,7 @@
 				363C6ACB28829D7200E49CA4 /* 02_Candidates.swift in Sources */,
 				3628D5C62886BA5500FF4E40 /* 03_Mutants.swift in Sources */,
 				3628D5C22886B99800FF4E40 /* main.swift in Sources */,
+				36A9481F288EC3F40049B24B /* 04_CodeExam.swift in Sources */,
 				363C6ACD2882B54500E49CA4 /* Library.swift in Sources */,
 				363C6AC92881AD7300E49CA4 /* 01_NimGame.swift in Sources */,
 			);
