@@ -65,15 +65,15 @@ struct GameClub {
     }
 }
 
-/*
-let nim = Nim()
-
-let players = [
-    NimPlayer(name: "Steve"),
-    NimPlayer(name: "Bill"),
-    NimPlayer(name: "Kelly"),
-]
-
-let strangerThings = GameClub(players: players)
-strangerThings.runSeason()
-*/
+let nimGame = {
+    let nim = Nim()
+    
+    let players = [
+        NimPlayer(name: "Steve"),
+        NimPlayer(name: "Bill"),
+        NimPlayer(name: "Kelly"),
+    ]
+    
+    let strangerThings = GameClub(players: players)
+    strangerThings.runSeason()
+}
