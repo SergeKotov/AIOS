@@ -8,7 +8,3 @@
 import Foundation
 
 
-var computer = Computer()
-computer.powerOn = true
-
-

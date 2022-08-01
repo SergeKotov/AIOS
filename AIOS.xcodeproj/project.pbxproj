@@ -14,6 +14,7 @@
 		363C6ACD2882B54500E49CA4 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6ACC2882B54500E49CA4 /* Library.swift */; };
 		364F62C2289171CA00BF4B86 /* 05_RetroComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F62C1289171CA00BF4B86 /* 05_RetroComputer.swift */; };
 		36A9481F288EC3F40049B24B /* 04_CodeExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9481E288EC3F40049B24B /* 04_CodeExam.swift */; };
+		36F05B53289847EC00CBE3FC /* 06_FunComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F05B52289847EC00CBE3FC /* 06_FunComputer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,7 @@
 		363C6ACC2882B54500E49CA4 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		364F62C1289171CA00BF4B86 /* 05_RetroComputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 05_RetroComputer.swift; sourceTree = "<group>"; };
 		36A9481E288EC3F40049B24B /* 04_CodeExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 04_CodeExam.swift; sourceTree = "<group>"; };
+		36F05B52289847EC00CBE3FC /* 06_FunComputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 06_FunComputer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				3628D5A12886B05B00FF4E40 /* 03_Mutants.swift */,
 				36A9481E288EC3F40049B24B /* 04_CodeExam.swift */,
 				364F62C1289171CA00BF4B86 /* 05_RetroComputer.swift */,
+				36F05B52289847EC00CBE3FC /* 06_FunComputer.swift */,
 				363C6ACC2882B54500E49CA4 /* Library.swift */,
 			);
 			path = AIOS;
@@ -142,6 +145,7 @@
 				3628D5C62886BA5500FF4E40 /* 03_Mutants.swift in Sources */,
 				3628D5C22886B99800FF4E40 /* main.swift in Sources */,
 				36A9481F288EC3F40049B24B /* 04_CodeExam.swift in Sources */,
+				36F05B53289847EC00CBE3FC /* 06_FunComputer.swift in Sources */,
 				364F62C2289171CA00BF4B86 /* 05_RetroComputer.swift in Sources */,
 				363C6ACD2882B54500E49CA4 /* Library.swift in Sources */,
 				363C6AC92881AD7300E49CA4 /* 01_NimGame.swift in Sources */,
