@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		361BA5AD289C60F9005CADCF /* 07_OOP_examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361BA5AC289C60F8005CADCF /* 07_OOP_examples.swift */; };
 		3628D5C22886B99800FF4E40 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6AC12881ACDA00E49CA4 /* main.swift */; };
 		3628D5C62886BA5500FF4E40 /* 03_Mutants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628D5A12886B05B00FF4E40 /* 03_Mutants.swift */; };
 		363C6AC92881AD7300E49CA4 /* 01_NimGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6AC82881AD7300E49CA4 /* 01_NimGame.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		361BA5AC289C60F8005CADCF /* 07_OOP_examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 07_OOP_examples.swift; sourceTree = "<group>"; };
 		3628D5A12886B05B00FF4E40 /* 03_Mutants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03_Mutants.swift; sourceTree = "<group>"; };
 		363C6ABE2881ACDA00E49CA4 /* AIOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AIOS; sourceTree = BUILT_PRODUCTS_DIR; };
 		363C6AC12881ACDA00E49CA4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				36A9481E288EC3F40049B24B /* 04_CodeExam.swift */,
 				364F62C1289171CA00BF4B86 /* 05_RetroComputer.swift */,
 				36F05B52289847EC00CBE3FC /* 06_FunComputer.swift */,
+				361BA5AC289C60F8005CADCF /* 07_OOP_examples.swift */,
 				363C6ACC2882B54500E49CA4 /* Library.swift */,
 			);
 			path = AIOS;
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				361BA5AD289C60F9005CADCF /* 07_OOP_examples.swift in Sources */,
 				363C6ACB28829D7200E49CA4 /* 02_Candidates.swift in Sources */,
 				3628D5C62886BA5500FF4E40 /* 03_Mutants.swift in Sources */,
 				3628D5C22886B99800FF4E40 /* main.swift in Sources */,
