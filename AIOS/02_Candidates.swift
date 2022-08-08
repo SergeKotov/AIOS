@@ -49,12 +49,12 @@ class Programmer: SwiftCandidate {
     }
 }
 
-protocol HRService {
+protocol HeadHunting {
     mutating func getCandidates(people: [Programmer])
     func fillVacancy(minRating: Int) -> Programmer?
 }
 
-struct Company: HRService {
+struct Company: HeadHunting {
 
     private(set) var candidates: [Programmer]
     
