@@ -13,7 +13,9 @@ class Nim {
 
 class Player {
     let name: String
-    func turn() { }
+    func turn() {
+        print(name, terminator: " ")
+    }
     
     init(name: String) {
         self.name = name
@@ -24,6 +26,8 @@ class NimPlayer: Player {
     var nim: Nim?
     
     override func turn() {
+        super.turn()
+        
         guard let nim = nim else {
             print("The game not loaded")
             exit(1)
@@ -31,14 +35,14 @@ class NimPlayer: Player {
         
         var nonEmptyHeaps = nim.heaps.filter { heap in heap != 0 }
         if nonEmptyHeaps.isEmpty {
-            print("\(name) lost")
+            print("lost\n")
             exit(0)
         } else {
             let heapInd = Int.random(in: 0..<nonEmptyHeaps.count)
             let restNum = nonEmptyHeaps[heapInd]
             let removedNum = Int.random(in: 1...restNum)
             nonEmptyHeaps[heapInd] -= removedNum
-            print("\(name) take \(removedNum) from heap \(heapInd)")
+            print("take \(removedNum) from heap \(heapInd+1)\n")
             nim.heaps = nonEmptyHeaps
         }
     }
@@ -77,3 +81,4 @@ let nimGame = {
     let strangerThings = GameClub(players: players)
     strangerThings.runSeason()
 }
+

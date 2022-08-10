@@ -43,7 +43,7 @@ class Computer {
 
     // lazy property
     lazy var programs = [
-        "nim": nimGame,
+//        "nim": nimGame,
         "candidates": candidatesSim,
         "mutants": mutantBattle,
         "swift": swiftTest
