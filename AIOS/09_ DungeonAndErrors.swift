@@ -57,6 +57,12 @@ final class DungeonAndErrors {
     
     func run() throws {
         print("\nDungeons & Errors Game\n")
+        
+        // handle an error by converting it to an optional value
+        if let rules = try? String(contentsOfFile: "Rules") {
+            print(rules)
+        }
+        
         let range = (0...rooms.count)
         
         while true {
@@ -68,7 +74,9 @@ final class DungeonAndErrors {
             let up = curRoom+7
             guard range.contains(left),
                   range.contains(right),
-                  range.contains(up) else { throw GameError.indexOut }
+                  range.contains(up) else {
+                throw GameError.indexOut
+            }
             
             let l = rooms[left]; if l != 0 { printMessage(l) }
             let r = rooms[right]; if r != 0 { printMessage(r) }
