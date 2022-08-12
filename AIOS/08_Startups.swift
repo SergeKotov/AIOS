@@ -148,19 +148,19 @@ let justNumber = 9
 
 var startupMarket: [Any] = [bestHeads, fatherAndMother, digiVision, humanRoboticsInc, roboMenLtd, нетПроблем, justNumber]
 
-/*
-for startup in startupMarket {
-    if let headHunting = startup as? HeadHunting {
-        if let candidate = headHunting.fillVacancy(minRating: 8) {
-            print("New star is: \(candidate.name)")
+let startups = {
+    for startup in startupMarket {
+        if let headHunting = startup as? HeadHunting {
+            if let candidate = headHunting.fillVacancy(minRating: 8) {
+                print("New star is: \(candidate.name)")
+            }
+        }
+    }
+    
+    for startup in startupMarket {
+        if let number = startup as? Int {
+            print("\nJust do \(number) as square \(number.square()) for investments")
         }
     }
 }
-
-for startup in startupMarket {
-    if let number = startup as? Int {
-        print("\nJust do \(number) as square \(number.square()) for investments")
-    }
-}
-*/
 

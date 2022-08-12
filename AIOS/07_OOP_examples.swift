@@ -104,20 +104,20 @@ public class Library {
     }
 }
 
-/*
-var jonRead = Author(name: "Jon Read", country: .usa, genre: .fiction)
-jonRead.writeNewBook(title: "Hello my funny world")
-print(jonRead.books[1] ?? "nothing")
-print(jonRead.books[1]?.author.books[1] ?? "nothing") // check differences a reference type from a value type
-jonRead.publishBook(title: "Hello my funny world")
-jonRead.publishBook(title: "The strange world")
-print()
-
-let drJekyll = HorrorAuthor(name: "Dr. Jekyll", country: .britain)
-drJekyll.writeNewBook(title: "Strange Case of Dr Jekyll and Mr Hyde")
-drJekyll.publishBook(title: "Strange Case of Dr Jekyll and Mr Hyde")
-print()
-*/
+let literature = {
+    var jonRead = Author(name: "Jon Read", country: .usa, genre: .fiction)
+    jonRead.writeNewBook(title: "Hello my funny world")
+    print(jonRead.books[1] ?? "nothing")
+    print(jonRead.books[1]?.author.books[1] ?? "nothing") // check differences a reference type from a value type
+    jonRead.publishBook(title: "Hello my funny world")
+    jonRead.publishBook(title: "The strange world")
+    print()
+    
+    let drJekyll = HorrorAuthor(name: "Dr. Jekyll", country: .britain)
+    drJekyll.writeNewBook(title: "Strange Case of Dr Jekyll and Mr Hyde")
+    drJekyll.publishBook(title: "Strange Case of Dr Jekyll and Mr Hyde")
+    print()
+}
 
 /*
 // addon to examples

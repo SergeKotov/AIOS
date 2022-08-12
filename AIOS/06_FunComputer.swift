@@ -51,7 +51,7 @@ class FunComputer {
         print("AIOS Computer ver. 2.0\n")
         
         while powerOn {
-            print(">")
+            print(">", terminator: " ")
             let commandLine = readLine()!.components(separatedBy: " ")
             let keyword = commandLine[0]
             switch keyword {
@@ -85,16 +85,17 @@ class FunComputer {
     }
 }
 
-/*
+
 // Run
-let computer = FunComputer()
-
-computer.upgrade(name: "turnoff", command: .computer(turnOff))
-computer.upgrade(name: "date", command: .voidToStr({ "Current date: " + Date().formatted(date: .numeric, time: .omitted) }))
-computer.upgrade(name: "swift", command: .void(swiftTest))
-
-computer.runOS()
-*/
+let funComputer = {
+    let computer = FunComputer()
+    
+    computer.upgrade(name: "turnoff", command: .computer(turnOff))
+    computer.upgrade(name: "date", command: .voidToStr({ "Current date: " + Date().formatted(date: .numeric, time: .omitted) }))
+    computer.upgrade(name: "swift", command: .void(swiftTest))
+    
+    computer.runOS()
+}
 
 /*
 // Closure examples

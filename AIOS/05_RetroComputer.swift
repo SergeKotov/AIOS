@@ -52,7 +52,7 @@ class Computer {
     // method: tiny operation system :)
     private func readCommand() {
         while powerOn {
-            print(">")
+            print(">", terminator: " ")
             let commandLine = readLine()!.components(separatedBy: " ")
             if (1...2) ~= commandLine.count {
                 let keyword = Command(rawValue: commandLine[0])

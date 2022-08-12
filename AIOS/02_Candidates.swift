@@ -7,11 +7,13 @@
 
 import Foundation
 
+// Enumeration
 enum Skill: CaseIterable {
     case experience
     case swiftly
 }
 
+// Protocol
 protocol SwiftCandidate {
     var age: Int { get }
     var cv: String? { get set }
@@ -20,6 +22,7 @@ protocol SwiftCandidate {
     func makeCV() -> String
 }
 
+// Class
 class Programmer: SwiftCandidate {
     let name: String
     
@@ -49,11 +52,13 @@ class Programmer: SwiftCandidate {
     }
 }
 
+// Another protocol
 protocol HeadHunting {
     mutating func getCandidates(people: [Programmer])
     func fillVacancy(minRating: Int) -> Programmer?
 }
 
+// Structure
 struct Company: HeadHunting {
 
     private(set) var candidates: [Programmer]
@@ -62,7 +67,7 @@ struct Company: HeadHunting {
     
     mutating func getCandidates(people: [Programmer]) {
         candidates = people.filter { candidate in candidate.cv != nil }
-//        candidates = []
+//        candidates = [] // the iterative version of the functional style version
 //        for guy in people {
 //            if guy.cv != nil {
 //                candidates.append(guy)
@@ -102,6 +107,7 @@ struct Company: HeadHunting {
     }
 }
 
+// Closure: use candidatesSim() to run the simulation
 let candidatesSim = {
     struct Person {
         let name: String

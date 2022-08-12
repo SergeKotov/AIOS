@@ -7,25 +7,26 @@
 
 import Foundation
 
-// Dungeons & Errors Game
-
-enum GameError: String, Error {
-    case indexOut = "Index out of the range"
-    case illegalInput = "Illegal input string"
+// A structure as an Error
+struct GameError: Error {
+    var description: String
 }
 
+// An Error with an associated value
 enum DungeonError: Int, Error {
     case ops = -10
     case woops = -70
     case fatalError = -1000
 }
 
+// Not an error, a prize!
 enum DungeonPrize: Int, Error {
     case coins = 5
     case box = 20
     case princeOrPrincess = 1_000_000
 }
 
+// Dungeons & Errors Game
 final class DungeonAndErrors {
     let startRoom = 3
     var curRoom: Int
@@ -47,10 +48,10 @@ final class DungeonAndErrors {
                 rooms[ind] = chance(0.5) ? DungeonPrize.coins.rawValue : DungeonPrize.box.rawValue
             }
         }
-        
+        // set a winning room
         let princessRoom = (0..<rooms.count).randomElement()!
         rooms[princessRoom] = DungeonPrize.princeOrPrincess.rawValue
-        
+        // set a room for losers
         let fatalRoom = (0..<rooms.count).randomElement()!
         rooms[fatalRoom] = DungeonError.fatalError.rawValue
     }
@@ -75,7 +76,7 @@ final class DungeonAndErrors {
             guard range.contains(left),
                   range.contains(right),
                   range.contains(up) else {
-                throw GameError.indexOut
+                throw GameError(description: "You fell into a bottomless hole")
             }
             
             let l = rooms[left]; if l != 0 { printMessage(l) }
@@ -86,14 +87,14 @@ final class DungeonAndErrors {
             print("\nPress 1 to move left, 2 to move right and 3 to move forward:")
             let str = readLine() ?? ""
             guard let s = Int(str) else {
-                throw GameError.illegalInput
+                throw GameError(description: "Somethings feels to bad..")
             }
             switch s {
             case 1: curRoom -= 1
             case 2: curRoom += 1
             case 3: curRoom += 7
             default:
-                throw GameError.illegalInput
+                throw GameError(description: "The cave has collapsed.")
             }
             
             // What's happening?
@@ -114,29 +115,30 @@ final class DungeonAndErrors {
         print( value > 0 ? (value > 1000 ? amazeMessage : fineMessage) : vineMessage)
     }
 }
-/*
-var isGaming = true
-while isGaming {
-    do {
-        try DungeonAndErrors().run()
+
+let dangeonsAndErrors = {
+    var isGaming = true
+    while isGaming {
+        do {
+            // let's play!
+            try DungeonAndErrors().run()
+            
+            // catch 'errors'
+        } catch is DungeonError {
+            print("You lose")
+        } catch DungeonPrize.princeOrPrincess {
+            print("You saved the prince / princess.")
+        } catch let error as GameError {
+            print(error.description)
+        }
         
-        // catch 'errors'
-    } catch is DungeonError {
-        print("You lose")
-    } catch DungeonPrize.princeOrPrincess {
-        print("You saved the prince / princess.")
-    } catch GameError.indexOut {
-        print(GameError.indexOut.rawValue)
-    } catch GameError.illegalInput {
-        print(GameError.illegalInput.rawValue)
+        print("Would you like to play the next game? [Y, N]")
+        let answer = readLine()?.uppercased() ?? ""
+        if answer != "Y" {
+            isGaming = false
+        }
     }
     
-    print("Would you like to play the next game? [Y, N]")
-    let answer = readLine()?.uppercased() ?? ""
-    if answer != "Y" {
-        isGaming = false
-    }
+    print("Goodbye\n")
 }
 
-print("Goodbye\n")
-*/
