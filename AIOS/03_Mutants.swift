@@ -86,19 +86,6 @@ class AwakeningAgent: Agent {
     }
 }
 
-
-class AwareAgent: Agent {
-    
-    override func act(versus: Agent) {
-        switch versus.shape {
-        case .ghost: shape = .zombie
-        case .zombie: shape = .vampire
-        case .vampire: shape = .ghost
-        }
-        super.act(versus: versus)
-    }
-}
-
 let mutantBattle = {
     // create agents
     let agentCount = 1200
