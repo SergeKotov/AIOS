@@ -120,66 +120,64 @@ let literature = {
 }
 
 /*
-// addon to examples
+ class Rectangle {
+     var width: Float
+     var length: Float
 
-class Rectangle {
-    var width: Float
-    var length: Float
-    init(width: Float, length: Float) {
-        self.width = width
-        self.length = length
-        printRect()
-    }
-    func printRect() {
-        print("Rectangle: \(width) x \(length)")
-    }
-}
+     init(width: Float, length: Float) {
+         self.width = width
+         self.length = length
+         printProperties()
+     }
+     func printProperties() {
+         print("Properties: width \(width) and length \(length)")
+     }
+ }
 
+ class Trapezoid: Rectangle {
+     var height: Float
 
-class Trapezoid: Rectangle {
-    var height: Float
+     init(width: Float, length: Float, height: Float) {
+         self.height = height
+         super.init(width: width, length: length)
+     }
 
-    init(width: Float, length: Float, height: Float) {
-        self.height = height
-        super.init(width: width, length: length)
-    }
+     override func printProperties() {
+         super.printProperties()
+         print(" and height \(height)")
+     }
+ }
 
-    override func printRect() {
-        super.printRect()
-        print(" and \(height)")
-    }
-}
+ class Sphinx {
+     var value: Float = 0 {
+         didSet {
+             print("Value: \(value)")
+         }
+     }
+ }
 
-class Sphinx {
-    var value: Float = 0 {
-        didSet {
-            print("Value: \(value)")
-        }
-    }
-}
+ final class TrapezoidPlus: Trapezoid {
+     var sphinx: Sphinx?
 
-class TrapezoidPlus: Rectangle {
-    var height: Float
-    var sphinx: Sphinx!
+     override init(width: Float, length: Float, height: Float) {
+         super.init(width: width, length: length, height: height)
+         sphinx = getSphinx(width: width, length: length, height: height)
+     }
 
-    init(width: Float, length: Float, height: Float) {
-        self.height = height
-        super.init(width: width, length: length)
-        sphinx = getFoo(width: width, length: length, height: height)
-    }
+     func getSphinx(width: Float, length: Float, height: Float) -> Sphinx {
+         let sphinx = Sphinx()
+         sphinx.value = width * length * height
+         return sphinx
+     }
+ }
 
-    func getFoo(width: Float, length: Float, height: Float) -> Sphinx {
-        let sphinx = Sphinx()
-        sphinx.value = width * length * height
-        return sphinx
-    }
+ print("\nRectangle")
+ _ = Rectangle(width: 20, length: 15)
+ print("\nTrapezoid")
+ _ = Trapezoid(width: 20, length: 15, height: 10)
+ print("\nTrapezoid Plus")
+ _ = TrapezoidPlus(width: 230, length: 1, height: 146.6)
 
-    override func printRect() {
-        super.printRect()
-        print(" and \(height)")
-    }
-}
-
-_ = TrapezoidPlus(width: 230, length: 1, height: 146.6)
+ print("\n")
 */
 
