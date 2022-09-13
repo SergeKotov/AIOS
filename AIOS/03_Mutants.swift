@@ -5,6 +5,10 @@
 //  Created by Serge Kotov on 19.07.2022.
 //
 
+public enum Outcome: Int {
+    case draw, win, loss
+}
+
 public enum Shape: Int, CaseIterable {
     case ghost, zombie, vampire
     
@@ -16,10 +20,6 @@ public enum Shape: Int, CaseIterable {
         default:    return .loss
         }
     }
-}
-
-public enum Outcome: Int {
-    case draw, win, loss
 }
 
 class Agent {
@@ -140,7 +140,6 @@ let filtered = wordLog.compactMap { $0?.uppercased() }
 
 print(upperWorlds)
 print(filtered)
-print()
-print()
+print(\n)
 */
 

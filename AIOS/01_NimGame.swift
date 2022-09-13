@@ -13,6 +13,7 @@ class Nim {
 
 class Player {
     let name: String
+ 
     func turn() {
         print(name, terminator: " ")
     }
@@ -64,7 +65,7 @@ struct GameClub {
                 print(game.heaps)
                 player.turn()
             }
-            print()
+            _ = readLine()
         }
     }
 }
