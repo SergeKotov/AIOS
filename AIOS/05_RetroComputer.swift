@@ -28,8 +28,12 @@ class Computer {
     }
 
     // calculated properties
+    var commandList: String {
+        let commandList = Command.allCases.map { $0.rawValue }
+        return "Available commands: \(commandList)"
+    }
+    
     var time: String { Date().formatted(date: .omitted, time: .shortened) }
-    var commandList: String { "Available commands: \(Command.allCases)" }
 
     // getter and setter
     var memory: String {
@@ -54,17 +58,20 @@ class Computer {
         while powerOn {
             print(">", terminator: " ")
             let commandLine = readLine()!.components(separatedBy: " ")
-            if (1...2) ~= commandLine.count {
+            if !commandLine.isEmpty {
                 let keyword = Command(rawValue: commandLine[0])
                 switch keyword {
                 case .power:
-                    if commandLine[1] == "off" {
+                    if commandLine.count > 1, commandLine[1] == "off" {
                         powerOn = false
+                    } else {
+                        print("\(time): power on")
                     }
                 case .help:
                     print(commandList)
                 case .save:
-                    memory = commandLine.count > 1 ? commandLine[1] : "blank"
+                    memory = commandLine.dropFirst().reduce("") { $0 + " " + $1 }
+                    print("ok, saved")
                 case .load:
                     print(memory)
                 case .run:
