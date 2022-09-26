@@ -100,16 +100,19 @@ let funComputer = {
 /*
 // Closure examples
 // 1
-let block = { (name: String, age: Int) -> String in
-    "Name is: \(name). Age is: \(age)"
-}
+ func function(_ name: String, _ age: Int) -> String {
+     "Name is: \(name). Age is: \(age)"
+ }
 
-func blockF(_ name: String, _ age: Int) -> String {
-    "Name is: \(name). Age is: \(age)"
-}
+ let closure = { (name: String, age: Int) -> String in
+     "Name is: \(name). Age is: \(age)"
+ }
 
-let a = block("Anna", 18)
-print(a)
+ let a = function("Anna", 18)
+ let b = closure("Anna", 18)
+ print(a)
+ print(b)
+ print("\n")
 
 // 2
 let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella", "Alibaba"]
