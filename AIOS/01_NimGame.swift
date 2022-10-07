@@ -29,7 +29,7 @@ class NimPlayer: Player {
     override func turn() {
         super.turn()
         
-        guard let nim = nim else {
+        guard let nim else {
             print("The game not loaded")
             exit(1)
         }

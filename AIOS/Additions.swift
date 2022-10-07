@@ -28,7 +28,7 @@ class Me: NimPlayer {
 
     private func makeTurn() throws {
         
-        guard let nim = nim else {
+        guard let nim else {
             throw GameError.gameNotExist
         }
         
