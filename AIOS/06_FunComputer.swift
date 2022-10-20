@@ -7,17 +7,21 @@
 
 import Foundation
 
+// convenient type aliases
+typealias StrToVoid = (String) -> Void
+typealias VoidToStr = () -> String
+typealias VoidVoid = () -> Void
 
 // built-in сlosures
-let printClosure: (String) -> Void = { string in print(string) }
-let saveClosure: (String) -> Void = { UserDefaults.standard.set($0, forKey: "memory") }
-let loadClosure: () -> String = { UserDefaults.standard.string(forKey: "memory") ?? "" }
-let time: () -> String = { "Current time: " + Date().formatted(date: .omitted, time: .shortened) }
+let printClosure: StrToVoid = { string in print(string) }
+let saveClosure: StrToVoid = { UserDefaults.standard.set($0, forKey: "memory") }
+let loadClosure: VoidToStr = { UserDefaults.standard.string(forKey: "memory") ?? "" }
+let time: VoidToStr = { "Current time: " + Date().formatted(date: .omitted, time: .shortened) }
 
 // add-on closures
 let turnOff: (FunComputer) -> Void = { computer in computer.powerOn = false }
 
-// new version for the retro computer
+// new version of the retro computer
 class FunComputer {
     
     var powerOn: Bool = true {
@@ -30,17 +34,19 @@ class FunComputer {
         }
     }
 
-    var commandList: String { "Available commands: \(closures.keys)" }
+    // calculated property
+    var commandList: String { "Available commands: \(commands.keys)" }
 
+    // enum with closures as associated values
     enum Command {
-        case strToVoid((String) -> Void)
-        case voidToStr(() -> String)
-        case void(() -> Void)
+        case strToVoid(StrToVoid)
+        case voidToStr(VoidToStr)
+        case void(VoidVoid)
         case computer((FunComputer) -> Void)
     }
     
-    // lazy property
-    lazy var closures: [String : Command] = [
+    // lazy dictionary of commands
+    lazy var commands: [String : Command] = [
         "print": .strToVoid(printClosure),
         "save": .strToVoid(saveClosure),
         "load": .voidToStr(loadClosure),
@@ -58,13 +64,14 @@ class FunComputer {
             case "help":
                 print(commandList)
             default:
-                if let closure = closures[commandLine[0]] {
+                if let closure = commands[keyword] {
                     switch closure {
                     case .strToVoid(let run):
                         if commandLine.count > 1 {
-                            run(commandLine[1])
+                            let reducedStrinng = commandLine.dropFirst().reduce("") { $0 + " " + $1 }
+                            run(reducedStrinng)
                         } else {
-                            print("uncorrect format for the command \(commandLine[0])")
+                            print("uncorrect format for the command \(keyword)")
                         }
                     case .voidToStr(let str):
                         print(str())
@@ -81,7 +88,7 @@ class FunComputer {
     }
     
     func upgrade(name: String, command: Command) {
-        closures[name] = command
+        commands[name] = command
     }
 }
 

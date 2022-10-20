@@ -140,6 +140,5 @@ let filtered = wordLog.compactMap { $0?.uppercased() }
 
 print(upperWorlds)
 print(filtered)
-print(\n)
 */
 
