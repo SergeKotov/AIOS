@@ -22,7 +22,7 @@ struct Task {
 
 // MARK: - HR
 
-// protocol HeadHunting - see session 02
+// protocol HeadHunting - see the session #2
 
 protocol Onboarding { }
 
@@ -117,7 +117,7 @@ enum Consalting: HeadHunting {
 }
 
 
-// extension
+// extensions
 
 extension Int {
     func square() -> Self { self * self }
