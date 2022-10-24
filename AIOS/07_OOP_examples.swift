@@ -19,6 +19,13 @@ enum Genre {
          western, scienceFiction, fantasy, realist, magical
 }
 
+struct Book {
+    let author: Author // attention!
+    let title: String
+    let year: Int
+    let genre: Genre
+}
+
 class Author {
     let name: String
     let country: Country
@@ -56,11 +63,6 @@ final class HorrorAuthor: Author {
 
     let ageRating: Int
 
-    override init(name: String, country: Country, genre: Genre) {
-        ageRating = 16
-        super.init(name: name, country: country, genre: genre)
-    }
-
     init(name: String, country: Country) {
         ageRating = 16
         super.init(name: name, country: country, genre: .horror)
@@ -70,13 +72,6 @@ final class HorrorAuthor: Author {
         super.publishBook(title: title)
         print("The book has age rating \(ageRating)+")
     }
-}
-
-struct Book {
-    let author: Author
-    let title: String
-    let year: Int
-    let genre: Genre
 }
 
 public class Library {
