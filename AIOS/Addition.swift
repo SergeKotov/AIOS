@@ -1,5 +1,5 @@
 //
-//  Additions.swift
+//  Addition.swift
 //  AIOS
 //
 //  Created by Serge Kotov on 09.08.2022.
@@ -17,16 +17,16 @@ class Me: NimPlayer {
         case illegalSymbol
     }
     
-    override func turn() {
+    override func turn() -> Bool {
         do {
-            try makeTurn()
+            return try makeTurn()
         } catch {
             print("Illegal move! Let's play AI:")
-            super.turn()
+            return super.turn()
         }
     }
 
-    private func makeTurn() throws {
+    private func makeTurn() throws -> Bool {
         
         guard let nim else {
             throw GameError.gameNotExist
@@ -34,8 +34,8 @@ class Me: NimPlayer {
         
         var nonEmptyHeaps = nim.heaps.filter { heap in heap != 0 }
         if nonEmptyHeaps.isEmpty {
-            print("\(name) lost\n")
-            exit(0)
+            print("\(name) lost 🥵\n")
+            return false
         } else {
             print("Heap?", terminator: " ")
             guard let heapInd = Int(readLine() ?? "1") else {
@@ -56,6 +56,8 @@ class Me: NimPlayer {
             nonEmptyHeaps[heapInd-1] -= removedNum
             print("\(name) take \(removedNum) from heap \(heapInd)\n")
             nim.heaps = nonEmptyHeaps
+            
+            return true
         }
     }
 }

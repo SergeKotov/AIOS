@@ -10,7 +10,7 @@ guard let num = Int(readLine() ?? "1") else {
 
 switch num {
 case 1: nimGame()
-case 2: candidatesSim()
+case 2: MicroComputer().runOS()
 case 3: print("The world of mutants:"); mutantBattle()
 case 4: swiftTest()
 case 5: Computer().powerOn = true

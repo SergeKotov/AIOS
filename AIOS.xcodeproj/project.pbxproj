@@ -15,10 +15,12 @@
 		363C6ACB28829D7200E49CA4 /* 02_Candidates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6ACA28829D7200E49CA4 /* 02_Candidates.swift */; };
 		363C6ACD2882B54500E49CA4 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6ACC2882B54500E49CA4 /* Library.swift */; };
 		364F62C2289171CA00BF4B86 /* 05_RetroComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F62C1289171CA00BF4B86 /* 05_RetroComputer.swift */; };
-		3688574528A28E9300B4F79B /* Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3688574428A28E9300B4F79B /* Additions.swift */; };
+		3688574528A28E9300B4F79B /* Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3688574428A28E9300B4F79B /* Addition.swift */; };
 		36A077A828A1A19E00A627A6 /* 08_Startups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A077A728A1A19E00A627A6 /* 08_Startups.swift */; };
 		36A9481F288EC3F40049B24B /* 04_CodeExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9481E288EC3F40049B24B /* 04_CodeExam.swift */; };
 		36F05B53289847EC00CBE3FC /* 06_FunComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F05B52289847EC00CBE3FC /* 06_FunComputer.swift */; };
+		36F6520D29363AE800B3DD37 /* 02_MicroComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F6520C29363AE800B3DD37 /* 02_MicroComputer.swift */; };
+		36F6520F29363E8A00B3DD37 /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F6520E29363E8A00B3DD37 /* Archive.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,10 +45,12 @@
 		363C6ACA28829D7200E49CA4 /* 02_Candidates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 02_Candidates.swift; sourceTree = "<group>"; };
 		363C6ACC2882B54500E49CA4 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		364F62C1289171CA00BF4B86 /* 05_RetroComputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 05_RetroComputer.swift; sourceTree = "<group>"; };
-		3688574428A28E9300B4F79B /* Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Additions.swift; sourceTree = "<group>"; };
+		3688574428A28E9300B4F79B /* Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addition.swift; sourceTree = "<group>"; };
 		36A077A728A1A19E00A627A6 /* 08_Startups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 08_Startups.swift; sourceTree = "<group>"; };
 		36A9481E288EC3F40049B24B /* 04_CodeExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 04_CodeExam.swift; sourceTree = "<group>"; };
 		36F05B52289847EC00CBE3FC /* 06_FunComputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 06_FunComputer.swift; sourceTree = "<group>"; };
+		36F6520C29363AE800B3DD37 /* 02_MicroComputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 02_MicroComputer.swift; sourceTree = "<group>"; };
+		36F6520E29363E8A00B3DD37 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 			children = (
 				363C6AC12881ACDA00E49CA4 /* main.swift */,
 				363C6AC82881AD7300E49CA4 /* 01_NimGame.swift */,
+				36F6520C29363AE800B3DD37 /* 02_MicroComputer.swift */,
 				363C6ACA28829D7200E49CA4 /* 02_Candidates.swift */,
 				3628D5A12886B05B00FF4E40 /* 03_Mutants.swift */,
 				36A9481E288EC3F40049B24B /* 04_CodeExam.swift */,
@@ -90,7 +95,8 @@
 				36A077A728A1A19E00A627A6 /* 08_Startups.swift */,
 				3617097728A2608C00E73404 /* 09_ DungeonAndErrors.swift */,
 				363C6ACC2882B54500E49CA4 /* Library.swift */,
-				3688574428A28E9300B4F79B /* Additions.swift */,
+				3688574428A28E9300B4F79B /* Addition.swift */,
+				36F6520E29363E8A00B3DD37 /* Archive.swift */,
 			);
 			path = AIOS;
 			sourceTree = "<group>";
@@ -157,12 +163,14 @@
 				363C6ACB28829D7200E49CA4 /* 02_Candidates.swift in Sources */,
 				3617097828A2608C00E73404 /* 09_ DungeonAndErrors.swift in Sources */,
 				3628D5C62886BA5500FF4E40 /* 03_Mutants.swift in Sources */,
+				36F6520F29363E8A00B3DD37 /* Archive.swift in Sources */,
 				36A077A828A1A19E00A627A6 /* 08_Startups.swift in Sources */,
 				3628D5C22886B99800FF4E40 /* main.swift in Sources */,
 				36A9481F288EC3F40049B24B /* 04_CodeExam.swift in Sources */,
 				36F05B53289847EC00CBE3FC /* 06_FunComputer.swift in Sources */,
+				36F6520D29363AE800B3DD37 /* 02_MicroComputer.swift in Sources */,
 				364F62C2289171CA00BF4B86 /* 05_RetroComputer.swift in Sources */,
-				3688574528A28E9300B4F79B /* Additions.swift in Sources */,
+				3688574528A28E9300B4F79B /* Addition.swift in Sources */,
 				363C6ACD2882B54500E49CA4 /* Library.swift in Sources */,
 				363C6AC92881AD7300E49CA4 /* 01_NimGame.swift in Sources */,
 			);
