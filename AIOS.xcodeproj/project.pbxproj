@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36100D0F2939DD45009536C1 /* 09_SessionCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36100D0E2939DD45009536C1 /* 09_SessionCode.swift */; };
 		3617097828A2608C00E73404 /* 09_ DungeonAndErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617097728A2608C00E73404 /* 09_ DungeonAndErrors.swift */; };
 		361BA5AD289C60F9005CADCF /* 07_OOP_examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361BA5AC289C60F8005CADCF /* 07_OOP_examples.swift */; };
 		3628D5C22886B99800FF4E40 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6AC12881ACDA00E49CA4 /* main.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		36100D0E2939DD45009536C1 /* 09_SessionCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 09_SessionCode.swift; sourceTree = "<group>"; };
 		3617097728A2608C00E73404 /* 09_ DungeonAndErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "09_ DungeonAndErrors.swift"; sourceTree = "<group>"; };
 		361BA5AC289C60F8005CADCF /* 07_OOP_examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 07_OOP_examples.swift; sourceTree = "<group>"; };
 		3628D5A12886B05B00FF4E40 /* 03_Mutants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03_Mutants.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				361BA5AC289C60F8005CADCF /* 07_OOP_examples.swift */,
 				36A077A728A1A19E00A627A6 /* 08_Startups.swift */,
 				3617097728A2608C00E73404 /* 09_ DungeonAndErrors.swift */,
+				36100D0E2939DD45009536C1 /* 09_SessionCode.swift */,
 				363C6ACC2882B54500E49CA4 /* Library.swift */,
 				3688574428A28E9300B4F79B /* Addition.swift */,
 				36F6520E29363E8A00B3DD37 /* Archive.swift */,
@@ -161,6 +164,7 @@
 			files = (
 				361BA5AD289C60F9005CADCF /* 07_OOP_examples.swift in Sources */,
 				363C6ACB28829D7200E49CA4 /* 02_Candidates.swift in Sources */,
+				36100D0F2939DD45009536C1 /* 09_SessionCode.swift in Sources */,
 				3617097828A2608C00E73404 /* 09_ DungeonAndErrors.swift in Sources */,
 				3628D5C62886BA5500FF4E40 /* 03_Mutants.swift in Sources */,
 				36F6520F29363E8A00B3DD37 /* Archive.swift in Sources */,

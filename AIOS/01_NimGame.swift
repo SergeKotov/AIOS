@@ -33,7 +33,7 @@ import Foundation
      override func turn() -> Bool {
          var isGaming = super.turn()
          
-         if let nim {
+         if let nim, isGaming {
              var nonEmptyHeaps = nim.heaps.filter { heap in heap != 0 }
              if nonEmptyHeaps.isEmpty {
                  print("lost 🥵\n")
@@ -66,7 +66,7 @@ import Foundation
      
      mutating func runGameSession() {
          sessionNumber += 1
-         print("🧩 Nim game, session #\(sessionNumber) \n")
+         print("\n🧩 Nim game, session #\(sessionNumber) \n")
          game.heaps = [1, 2, 3, 4, 3, 2, 1]
          
          for player in players {
