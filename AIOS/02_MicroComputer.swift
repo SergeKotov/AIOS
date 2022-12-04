@@ -9,23 +9,31 @@ import Foundation
 
 // Протокол: что важно для интерфейса?
 protocol Computing {
-    var settings: MicroComputer.Settings { get set }
+    var settings: MCSettings { get set }
     func runOS()
+}
+
+// структура, будет использоваться для нескольких версий компьютера
+struct MCSettings {
+    let id: String
+    var sessionStarted: Date
 }
 
 // пример класса, удовлетворяющего требованиям протокола Computing
 class MicroComputer: Computing {
     
-    // структура, вложенная в класс
-    struct Settings {
-        let id: String = UUID().description
-        var sessionStarted = Date()
+    // свойство класса + пример агрегации
+    var settings: MCSettings
+    
+    // инициализация объекта (создание экземпляра класса)
+    init() {
+        let id = UUID().description
+        let currentDateTime = Date()
+        self.settings = MCSettings(id: id, sessionStarted: currentDateTime)
     }
     
-    // свойство класса + пример композиции, так как settings существует внутри MicroComputer
-    var settings = Settings()
-    
     // перечисление с rawValue и возможностью перебора различных case (протокол CaseIterable)
+    // пример композиции, перечисление Command определено внутри класса
     enum Command: String, CaseIterable {
         case exit, help, run, settings, time
     }

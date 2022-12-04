@@ -87,15 +87,18 @@ class AwakeningAgent: Agent {
 }
 
 let mutantBattle = {
+    print("The world of mutants\n")
+    
     // create agents
     let agentCount = 1200
     var agents: [Int: Agent] = [:]
     agents.reserveCapacity(agentCount)
     for id in 0..<agentCount {
-        switch id % 3 {
+        switch id % 4 {
         case 0: agents[id] = SteadyAgent()
         case 1: agents[id] = RandomAgent()
-        default: agents[id] = LearningAgent()
+        case 2: agents[id] = LearningAgent()
+        default: agents[id] = AwakeningAgent()
         }
     }
     
@@ -122,23 +125,3 @@ let mutantBattle = {
     }
     print()
 }
-
-/*
- // Functional programming
-let wordLog = ["GHbdtn", "Hello", nil, nil, "ПРювет"]
-
-var upperWorlds: [String] = []
-for word in wordLog {
-    if word != nil {
-        let WORD = word!.uppercased()
-        upperWorlds.append(WORD)
-    }
-}
-
-let filtered = wordLog.compactMap { $0?.uppercased() }
-    .filter { $0.first == "H"}
-
-print(upperWorlds)
-print(filtered)
-*/
-
