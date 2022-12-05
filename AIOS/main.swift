@@ -12,7 +12,10 @@ switch num {
 case 1: nimGame()
 case 2: MicroComputer().runOS()
 case 22: candidatesSim()
-case 3: MicroComputerV3().runOS()
+case 3:
+    let mc = MicroComputerV3()
+    mc.addProgram(name: "test", program: swiftTest)
+    mc.runOS()
 case 32: mutantBattle()
 case 4: swiftTest()
 case 5: Computer().powerOn = true
