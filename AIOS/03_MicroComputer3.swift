@@ -44,13 +44,6 @@ internal class MicroComp: MicroBase {
         return handling
     }
     
-    // MARK: Private section
-    
-    // расширяемый список программ
-    private var programs = [
-        "nim": nimGame,
-    ]
-    
     // новый метод
     func addProgram(name: String, program: @escaping VoidVoid) {
         guard name != "" else {
@@ -68,6 +61,13 @@ internal class MicroComp: MicroBase {
             print("No such program: \(name)")
         }
     }
+    
+    // MARK: Private section
+    
+    // расширяемый список программ
+    private var programs = [
+        "nim": nimGame,
+    ]
     
     // новая "перегруженная" версия метода, сигнатура совпадает так как доступ приватный
     private func getTime() -> String {

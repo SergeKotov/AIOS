@@ -18,7 +18,10 @@ case 3:
     mc.runOS()
 case 32: mutantBattle()
 case 4: swiftTest()
-case 5: Computer().powerOn = true
+case 5:
+    let mc = ProComp(ver: "4.0")
+    mc.addProgram(name: "swift", program: swiftTest)
+    mc.powerOn = true
 case 6: funComputer()
 case 7: literature()
 case 8: startups()
