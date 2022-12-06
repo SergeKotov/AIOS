@@ -7,54 +7,71 @@
 
 import Foundation
 
-// MARK: New class with extended features
+// MARK: Fileprivate extension
 
-class MicroComputerV3: MicroComputerV2 {
+fileprivate extension Computing {
+    func addProgram(name: String, program: @escaping VoidVoid) {}
+    func removeProgram(name: String) {}
+}
 
-    enum Command: String {
-        case exit, help, run, settings, time
+// MARK: - New child class
+
+internal class MicroComp: MicroBase {
+    
+    // переопределение инициализатора
+    override init(ver: String) {
+        super.init(ver: ver)        
+        commandList.insert("run")
     }
     
-    // переопределение метода для добавления новой команды
-    override func runOS() {
-        print("🌠 AIOS Computer, version 3.0")
-        print(getTime(), terminator: "\n\n")
-
+    // переопределение метода
+    override func handleCommand(input: [String]) -> Bool {
         var handling = true
-        while handling {
-            let (keyword, commandLine) = readCommand()
-            handling = handleCommand(keyword: keyword, input: commandLine)
-        }
-    }
-    
-    // новый метод взамен приватного в родительском класса
-    func readCommand() -> (MicroComputerV3.Command?, [String]) {
-        print("💬", terminator: " ")
-        let commandLine = readLine()!.components(separatedBy: " ")
-        let keyword = Command(rawValue: commandLine[0])
-        return (keyword, commandLine)
-    }
-    
-    // перегрузка метода
-    func handleCommand(keyword: MicroComputerV3.Command?, input: [String]) -> Bool {
+        let keyword = input[0]
         switch keyword {
-        case .time:
-            print(getTime(true))
-        default:
-            if let keyword, let commandV2 = MicroComputerV2.Command(rawValue: keyword.rawValue) {
-                return handleCommand(keyword: commandV2, input: input)
+        case "run":
+            if input.count > 1, let program = programs[input[1]] {
+                program()
             } else {
-                print("uncorrect command")
-                print(getCommandList())
+                print("no such program")
             }
+        case "time":
+            print(getTime())
+        default:
+            // вызов родительского метода
+            handling = super.handleCommand(input: input)
         }
-        return true
+        return handling
     }
     
-    // еще одна "приватная" перегрузка
-    private func getTime(_ withSeconds: Bool = false) -> String {
-        let sec: Date.FormatStyle.TimeStyle = withSeconds ? .standard : .shortened
-        let time = Date().formatted(date: .omitted, time: sec)
+    // MARK: Private section
+    
+    // расширяемый список программ
+    private var programs = [
+        "nim": nimGame,
+    ]
+    
+    // новый метод
+    func addProgram(name: String, program: @escaping VoidVoid) {
+        guard name != "" else {
+            print("error: empty string not allowed")
+            return
+        }
+        programs[name] = program
+    }
+    
+    // еще новый метод
+    func removeProgram(name: String) {
+        if let _ = programs.removeValue(forKey: name) {
+            print("Program \(name) removed")
+        } else {
+            print("No such program: \(name)")
+        }
+    }
+    
+    // новая "перегруженная" версия метода, сигнатура совпадает так как доступ приватный
+    private func getTime() -> String {
+        let time = Date().formatted(date: .omitted, time: .standard)
         return "Current time: \(time)"
     }
 }

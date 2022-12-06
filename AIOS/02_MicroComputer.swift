@@ -16,7 +16,7 @@ protocol Computing {
 // структура, будет использоваться для нескольких версий компьютера
 struct MCSettings {
     let id: String
-    var sessionStarted: Date
+    let version: String
 }
 
 // пример класса, удовлетворяющего требованиям протокола Computing
@@ -27,9 +27,7 @@ class MicroComputer: Computing {
     
     // инициализация объекта (создание экземпляра класса)
     init() {
-        let id = UUID().description
-        let currentDateTime = Date()
-        self.settings = MCSettings(id: id, sessionStarted: currentDateTime)
+        settings = MCSettings(id: UUID().description, version: "0.9")
     }
     
     // перечисление с rawValue и возможностью перебора различных case (протокол CaseIterable)
@@ -77,7 +75,7 @@ class MicroComputer: Computing {
                     print("no such program")
                 }
             case .settings:
-                print("settings: id: \(settings.id) , last started: \(settings.sessionStarted)")
+                print("settings: id: \(settings.id) , version: \(settings.version)")
             case .time:
                 print(getTime())
             default:

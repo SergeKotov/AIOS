@@ -13,7 +13,7 @@ case 1: nimGame()
 case 2: MicroComputer().runOS()
 case 22: candidatesSim()
 case 3:
-    let mc = MicroComputerV3()
+    let mc = MicroComp(ver: "3.0")
     mc.addProgram(name: "test", program: swiftTest)
     mc.runOS()
 case 32: mutantBattle()
