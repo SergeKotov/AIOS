@@ -46,7 +46,7 @@ let lessonTask = Hometask(task: "ToDo")
 let anna = Student(task: lessonTask)
 let sister = anna
 
-anna.task.task = "Don't"
+anna.task.task = "Dont"
 """
 
 let begin3 = """
@@ -132,8 +132,8 @@ print(student2.rawValue)
 let guess = [
     1: (begin1, end1, "class"),
     2: (begin1, end2, "good"),
-    3: (begin2, end3, "don't"),
-    4: (begin2, end4, "don't"),
+    3: (begin2, end3, "dont"),
+    4: (begin2, end4, "dont"),
     5: (begin3, end5, "ops"),
     6: (begin3, end6, "new"),
     7: (begin4, end7, "dima"),
@@ -146,23 +146,25 @@ let swiftTest = {
     var counter = 1
     var wrongAnswers = 0
     
-    print("Welcome to the Dream Company Greenhorn Swift developer test!")
+    print("🛳 Welcome to the Dream Company Greenhorn Swift developer test!")
     
     while counter < 10, wrongAnswers < 4 {
-        print("\n\n> Round \(counter)\n")
+        print("\n\n> 🎾 Round \(counter)\n")
         
         print(guess[counter].value.0)
         print(guess[counter].value.1)
-        print("\n> What will be printed?")
+        print("\n> What will be printed? 🖨")
         
         let guessAnswer = guess[counter].value.2
         let answer = readLine()?.lowercased()
             .trimmingCharacters(in: .whitespacesAndNewlines)
         if answer == guessAnswer {
+            let symbol = "🏵🥇🎗🎨🎖".randomElement()!
+            print(symbol, terminator: " ")
             print(GoodAnswer.allCases.randomElement()!.rawValue)
         } else {
             wrongAnswers += 1
-            print("Wrong, the right answer is: '\(guessAnswer)'")
+            print("❌ Wrong, the right answer is: '\(guessAnswer)'")
         }
         let _ = readLine()
         
@@ -173,9 +175,9 @@ let swiftTest = {
     print("\nYour result is \(counter - wrongAnswers) from \(counter)")
     switch wrongAnswers {
     case 0...2:
-        print("Excellent! Welcome to the board!")
+        print("🏆 Excellent! Welcome to the board!")
     case 3...4:
-        print("Try once more in next year.")
+        print("🏓 Try once more in next year.")
     default:
         print("👺")
     }
