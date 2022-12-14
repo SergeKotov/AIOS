@@ -24,7 +24,7 @@
 		36A077A828A1A19E00A627A6 /* 08_Startups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A077A728A1A19E00A627A6 /* 08_Startups.swift */; };
 		36A9481F288EC3F40049B24B /* 04_CodeExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9481E288EC3F40049B24B /* 04_CodeExam.swift */; };
 		36DC7B49293DFCC70092E366 /* 03_MicroComputer3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC7B48293DFCC70092E366 /* 03_MicroComputer3.swift */; };
-		36F05B53289847EC00CBE3FC /* 06_FunComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F05B52289847EC00CBE3FC /* 06_FunComputer.swift */; };
+		36F05B53289847EC00CBE3FC /* 06_MicroComputer5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F05B52289847EC00CBE3FC /* 06_MicroComputer5.swift */; };
 		36F6520D29363AE800B3DD37 /* 02_MicroComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F6520C29363AE800B3DD37 /* 02_MicroComputer.swift */; };
 		36F6520F29363E8A00B3DD37 /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F6520E29363E8A00B3DD37 /* Archive.swift */; };
 /* End PBXBuildFile section */
@@ -60,7 +60,7 @@
 		36A077A728A1A19E00A627A6 /* 08_Startups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 08_Startups.swift; sourceTree = "<group>"; };
 		36A9481E288EC3F40049B24B /* 04_CodeExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 04_CodeExam.swift; sourceTree = "<group>"; };
 		36DC7B48293DFCC70092E366 /* 03_MicroComputer3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03_MicroComputer3.swift; sourceTree = "<group>"; };
-		36F05B52289847EC00CBE3FC /* 06_FunComputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 06_FunComputer.swift; sourceTree = "<group>"; };
+		36F05B52289847EC00CBE3FC /* 06_MicroComputer5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 06_MicroComputer5.swift; sourceTree = "<group>"; };
 		36F6520C29363AE800B3DD37 /* 02_MicroComputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 02_MicroComputer.swift; sourceTree = "<group>"; };
 		36F6520E29363E8A00B3DD37 /* Archive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,7 +106,7 @@
 				36A9481E288EC3F40049B24B /* 04_CodeExam.swift */,
 				3612C5A82941E7F7009B3399 /* 04_SessionCode.swift */,
 				364F62C1289171CA00BF4B86 /* 05_MicroComputer4.swift */,
-				36F05B52289847EC00CBE3FC /* 06_FunComputer.swift */,
+				36F05B52289847EC00CBE3FC /* 06_MicroComputer5.swift */,
 				36100D10293A1126009536C1 /* 06_SessionCode.swift */,
 				361BA5AC289C60F8005CADCF /* 07_OOP_examples.swift */,
 				36A077A728A1A19E00A627A6 /* 08_Startups.swift */,
@@ -190,7 +190,7 @@
 				36A077A828A1A19E00A627A6 /* 08_Startups.swift in Sources */,
 				3628D5C22886B99800FF4E40 /* main.swift in Sources */,
 				36A9481F288EC3F40049B24B /* 04_CodeExam.swift in Sources */,
-				36F05B53289847EC00CBE3FC /* 06_FunComputer.swift in Sources */,
+				36F05B53289847EC00CBE3FC /* 06_MicroComputer5.swift in Sources */,
 				36F6520D29363AE800B3DD37 /* 02_MicroComputer.swift in Sources */,
 				364F62C2289171CA00BF4B86 /* 05_MicroComputer4.swift in Sources */,
 				3688574528A28E9300B4F79B /* Addition.swift in Sources */,

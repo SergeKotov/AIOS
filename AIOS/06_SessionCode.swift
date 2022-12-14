@@ -36,34 +36,34 @@ let sample6 = {
         return result
     }
 
-    let f = 9.0
-    let s = square(f)
-    print("The square for \(f) is \(s)")
+    let nine = 9.0
+    let sqared = square(nine)
+    print("The square for \(nine) is \(sqared)")
     
     // MARK: #3
     // Замыкания: тип определен аргументами и возвращаемым значением
     
-    let description: (String) -> String = { (name: String) -> String in
-        "Name is: \(name)."
-    }
-    print(description("Anna"))
-
-    let echo: (String) -> Void = { (name: String) in
-        print("Name is: \(name).")
-    }
-    echo("Dima")
-
-    let hello: () -> Void = {
+    let hello = { // () -> Void
         print("Hello world!")
     }
     hello()
+    
+    let echo = { (name: String) in // (String) -> Void
+        print("Name is: \(name).")
+    }
+    echo("Dima")
+    
+    let description = { (name: String) -> String in // (String) -> String
+        "Name is: \(name)."
+    }
+    print(description("Anna"))
     
     // MARK: #4
     // Cокращение синтаксиса замыканий: от сложного к простому:
     
     let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella", "Alibaba"]
 
-    func backward(_ s1: String, _ s2: String) -> Bool {
+    func backward(s1: String, s2: String) -> Bool {
         return s1 > s2
     }
 
@@ -102,4 +102,22 @@ let sample6 = {
         let a = users.filter { $0.first == "A" }
         print(a)
     }
+    
+    // MARK: #6
+    
+    let wordLog = ["param", "Hello", nil, nil, "ПРивЕт"]
+
+    // обработка коллекции в итеративным методом
+    var upperWorlds: [String] = []
+    for word in wordLog {
+        if word != nil {
+            let WORD = word!.uppercased()
+            upperWorlds.append(WORD)
+        }
+    }
+    print(upperWorlds)
+    
+    // обработка коллекции функциональным методом с аналогичным результатом
+    let sameWorlds = wordLog.compactMap { $0?.uppercased() }
+    print(sameWorlds)    
 }
