@@ -24,7 +24,7 @@ class FunComp: ProComp {
     }
     
     // dictionary of commands
-    var commands: [String : CommandEx] = [:]
+    private var commands: [String : CommandEx] = [:]
     
     override init(ver: String) {
         super.init(ver: ver)
@@ -66,12 +66,8 @@ class FunComp: ProComp {
     }
 }
 
-// very very hacker's feature
-let virus = { (happy: FunComp) -> Void in
-    var exclString = String()
-    for _ in 1...30 {
-        exclString += "!"
-        _ = happy.handleCommand(input: ["print", "Happy new year\(exclString)"])
-    }
-    happy.powerOn = false
+// Для продвинутых гиков - программа вирус
+let virus = { (comp: FunComp) -> Void in
+    _ = comp.handleCommand(input: ["print", "Я компьютерный вирус! Учил ли ты замыкания? Сюрприз! 👺"])
+    comp.commandList.forEach { comp.upgrade(name: $0, command: .void({})) }
 }

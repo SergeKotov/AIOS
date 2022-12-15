@@ -8,7 +8,7 @@
 let sample6 = {
     
     // MARK: #1
-    // Пример функции и замыкания с эквивалентным поведением:
+    // Функция и замыкание с эквивалентным поведением:
     func function(_ name: String) -> String {
         "Name is: \(name)."
     }
@@ -17,16 +17,16 @@ let sample6 = {
         "Name is: \(name)."
     }
 
-    let a = function("Anna")
-    let b = closure("Anna")
+    var name = function("Anna")
+    print(name)
 
-    print(a)
-    print(b)
+    name = closure("Anna")
+    print(name)
 
     // но замыкания более универсальны:
     closure = { name in "I am Groot" }
-    let с = closure("Anna")
-    print(с)
+    name = closure("Anna")
+    print(name)
     
     // MARK: #2
     // Пример определения замыкания для вычисления
