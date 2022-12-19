@@ -66,6 +66,16 @@ class FunComp: ProComp {
     }
 }
 
+
+let upgrade = { (comp: FunComp) -> Void in
+    comp.settings.version = "6.1"
+    _ = comp.handleCommand(input: ["print", "Upgraded to version: \(comp.settings.version)"])
+    
+    // Attention!!!
+    comp.upgrade(name: "upgrade", command: .computer(virus))
+}
+
+
 // Для продвинутых гиков - программа вирус
 let virus = { (comp: FunComp) -> Void in
     _ = comp.handleCommand(input: ["print", "Я компьютерный вирус! Учил ли ты замыкания? Сюрприз! 👺"])

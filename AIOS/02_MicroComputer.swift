@@ -16,7 +16,7 @@ protocol Computing {
 // структура, будет использоваться для нескольких версий компьютера
 struct MCSettings {
     let id: String
-    let version: String
+    var version: String
 }
 
 // пример класса, удовлетворяющего требованиям протокола Computing
