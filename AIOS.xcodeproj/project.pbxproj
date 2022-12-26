@@ -25,6 +25,7 @@
 		36A077A828A1A19E00A627A6 /* 08_Startups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A077A728A1A19E00A627A6 /* 08_Startups.swift */; };
 		36A9481F288EC3F40049B24B /* 04_CodeExam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A9481E288EC3F40049B24B /* 04_CodeExam.swift */; };
 		36DC7B49293DFCC70092E366 /* 03_MicroComputer3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC7B48293DFCC70092E366 /* 03_MicroComputer3.swift */; };
+		36DC9E5229548F7300294FBC /* 01_SessionCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC9E5129548F7300294FBC /* 01_SessionCode.swift */; };
 		36F05B53289847EC00CBE3FC /* 06_MicroComputer5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F05B52289847EC00CBE3FC /* 06_MicroComputer5.swift */; };
 		36F6520D29363AE800B3DD37 /* 02_MicroComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F6520C29363AE800B3DD37 /* 02_MicroComputer.swift */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,7 @@
 		36A077A728A1A19E00A627A6 /* 08_Startups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 08_Startups.swift; sourceTree = "<group>"; };
 		36A9481E288EC3F40049B24B /* 04_CodeExam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 04_CodeExam.swift; sourceTree = "<group>"; };
 		36DC7B48293DFCC70092E366 /* 03_MicroComputer3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03_MicroComputer3.swift; sourceTree = "<group>"; };
+		36DC9E5129548F7300294FBC /* 01_SessionCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 01_SessionCode.swift; sourceTree = "<group>"; };
 		36F05B52289847EC00CBE3FC /* 06_MicroComputer5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 06_MicroComputer5.swift; sourceTree = "<group>"; };
 		36F6520C29363AE800B3DD37 /* 02_MicroComputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 02_MicroComputer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 			children = (
 				363C6AC12881ACDA00E49CA4 /* main.swift */,
 				363C6AC82881AD7300E49CA4 /* 01_NimGame.swift */,
+				36DC9E5129548F7300294FBC /* 01_SessionCode.swift */,
 				36F6520C29363AE800B3DD37 /* 02_MicroComputer.swift */,
 				363C6ACA28829D7200E49CA4 /* 02_Candidates.swift */,
 				366AC127293C9C4F0090F730 /* 03_MicroComputer2.swift */,
@@ -184,6 +187,7 @@
 				36100D0F2939DD45009536C1 /* 09_SessionCode.swift in Sources */,
 				3612C5A92941E7F7009B3399 /* 04_SessionCode.swift in Sources */,
 				36DC7B49293DFCC70092E366 /* 03_MicroComputer3.swift in Sources */,
+				36DC9E5229548F7300294FBC /* 01_SessionCode.swift in Sources */,
 				3617097828A2608C00E73404 /* 09_ DungeonAndErrors.swift in Sources */,
 				3628D5C62886BA5500FF4E40 /* 03_Mutants.swift in Sources */,
 				36A077A828A1A19E00A627A6 /* 08_Startups.swift in Sources */,

@@ -7,11 +7,6 @@
 
 import Foundation
 
-// Протокол: что важно для интерфейса?
-protocol Computing {
-    var settings: MCSettings { get set }
-    func runOS()
-}
 
 // структура, будет использоваться для нескольких версий компьютера
 struct MCSettings {
@@ -20,7 +15,7 @@ struct MCSettings {
 }
 
 // пример класса, удовлетворяющего требованиям протокола Computing
-class MicroComputer: Computing {
+class MicroComputer {
     
     // свойство класса + пример агрегации
     var settings: MCSettings

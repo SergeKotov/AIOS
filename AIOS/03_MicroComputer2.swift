@@ -7,6 +7,12 @@
 
 import Foundation
 
+// Протокол: что важно для интерфейса?
+protocol Computing {
+    var settings: MCSettings { get set }
+    func runOS()
+}
+
 // MARK: New class ready to inheritance
 
 public class MicroBase: Computing {

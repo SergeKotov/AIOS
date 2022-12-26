@@ -22,7 +22,23 @@ struct Task {
 
 // MARK: - HR
 
-// protocol HeadHunting - see the session #2
+protocol HeadHunting {
+    mutating func getCandidates(people: [Programmer])
+    func fillVacancy(minRating: Int) -> Programmer?
+}
+
+extension HeadHunting {
+    mutating func getCandidates(people: [Programmer]) {
+        print("A short list of candidats received.")
+    }
+
+    func fillVacancy(minRating: Int) -> Programmer? {
+        let name = ["Elly", "Dally", "Selly", "Poly", "Dolly", "Mister X", "Sara"].randomElement()!
+        let rating = Int.random(in: 18...60)
+        return rating > minRating ? Programmer(name: name, age: rating) : nil
+
+    }
+}
 
 protocol Onboarding { }
 
@@ -116,27 +132,6 @@ enum Consalting: HeadHunting {
     case family
 }
 
-
-// extensions
-
-extension Int {
-    func square() -> Self { self * self }
-}
-
-
-extension HeadHunting {
-    mutating func getCandidates(people: [Programmer]) {
-        print("A short list of candidats received.")
-    }
-    
-    func fillVacancy(minRating: Int) -> Programmer? {
-        let name = ["Elly", "Dally", "Selly", "Poly", "Dolly", "Mister X", "Sara"].randomElement()!
-        let age = Int.random(in: 18...60)
-        return age < minRating ? Programmer(name: name, age: age) : nil
-        
-    }
-}
-
 // Run
 
 let bestHeads = HRAgency()
@@ -147,13 +142,12 @@ let roboMenLtd = AIStartup()
 let нетПроблем = "МММ"
 let justNumber = 9
 
-var startupMarket: [Any] = [bestHeads, fatherAndMother, digiVision, humanRoboticsInc, roboMenLtd, нетПроблем, justNumber]
 
 let startups = {
     print("\nStartup market:")
     var startupMarket: [HeadHunting] = [bestHeads, fatherAndMother, digiVision, humanRoboticsInc, roboMenLtd]
     for startup in startupMarket {
-        if let candidate = startup.fillVacancy(minRating: 35) {
+        if let candidate = startup.fillVacancy(minRating: 50) {
             print("New star is: \(candidate.name)")
         }
     }
@@ -163,7 +157,7 @@ let startups = {
     var publicMarket: [Any] = [bestHeads, fatherAndMother, digiVision, humanRoboticsInc, roboMenLtd, нетПроблем, justNumber]
     for startup in publicMarket {
         if let headHunting = startup as? HeadHunting {
-            if let candidate = headHunting.fillVacancy(minRating: 70) {
+            if let candidate = headHunting.fillVacancy(minRating: 30) {
                 print("New star is: \(candidate.name)")
             }
         }
@@ -171,7 +165,7 @@ let startups = {
     
     for startup in publicMarket {
         if let number = startup as? Int {
-            print("\nJust make \(number) as square \(number.square()) for investments\n\n")
+            print("\nJust make \(number) as \(number.square()) for investments\n\n")
         }
     }
 }

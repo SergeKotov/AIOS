@@ -53,7 +53,7 @@ class Programmer: SwiftCandidate {
 }
 
 // Another protocol
-protocol HeadHunting {
+protocol HeadHuntingProtocol { // + Protocol
     mutating func getCandidates(people: [Programmer])
     func fillVacancy(minRating: Int) -> Programmer?
 }
