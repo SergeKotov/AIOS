@@ -61,3 +61,19 @@ class Me: NimPlayer {
         }
     }
 }
+
+class VideoNim: Nim {
+    
+    func show(heaps: [Int]) {
+        print(" ", terminator: "")
+        for c in heaps {
+            let symbol = c > 0 ? "🟢" : "  "
+            print(symbol, terminator: "")
+        }
+        print()
+        let nextHeaps = heaps.map { $0 - 1 }
+        if (nextHeaps.max() ?? -1) > 0 {
+            show(heaps: nextHeaps)
+        }
+    }
+}

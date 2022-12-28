@@ -26,7 +26,7 @@ case 6:
     let mc = FunComp(ver: "6.0")
     let dice = { "Throw the dice: 🎲 \(Int.random(in: 1...6))" }
     mc.upgrade(name: "dice", command: .voidToStr(dice))
-    mc.upgrade(name: "upgrade", command: .computer(upgrade))    
+    mc.upgrade(name: "upgrade", command: .computer(upgrade))
     mc.powerOn = true
 case 7: literature()
 case 8: startups()
