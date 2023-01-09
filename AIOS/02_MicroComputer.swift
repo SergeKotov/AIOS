@@ -14,7 +14,7 @@ struct MCSettings {
     var version: String
 }
 
-// пример класса, удовлетворяющего требованиям протокола Computing
+// пример класса
 class MicroComputer {
     
     // свойство класса + пример агрегации

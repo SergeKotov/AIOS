@@ -18,6 +18,7 @@
 		363C6ACB28829D7200E49CA4 /* 02_Candidates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6ACA28829D7200E49CA4 /* 02_Candidates.swift */; };
 		363C6ACD2882B54500E49CA4 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6ACC2882B54500E49CA4 /* Library.swift */; };
 		364F62C2289171CA00BF4B86 /* 05_MicroComputer4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F62C1289171CA00BF4B86 /* 05_MicroComputer4.swift */; };
+		365B41372969F3D300DC566C /* 02_SessionCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365B41362969F3D300DC566C /* 02_SessionCode.swift */; };
 		366AC128293C9C4F0090F730 /* 03_MicroComputer2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366AC127293C9C4F0090F730 /* 03_MicroComputer2.swift */; };
 		366AC12A293CA3270090F730 /* 03_SessionCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366AC129293CA3270090F730 /* 03_SessionCode.swift */; };
 		366EF720294DBCFE001A4982 /* 07_SessionCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 366EF71F294DBCFE001A4982 /* 07_SessionCode.swift */; };
@@ -55,6 +56,7 @@
 		363C6ACA28829D7200E49CA4 /* 02_Candidates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 02_Candidates.swift; sourceTree = "<group>"; };
 		363C6ACC2882B54500E49CA4 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		364F62C1289171CA00BF4B86 /* 05_MicroComputer4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 05_MicroComputer4.swift; sourceTree = "<group>"; };
+		365B41362969F3D300DC566C /* 02_SessionCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 02_SessionCode.swift; sourceTree = "<group>"; };
 		366AC127293C9C4F0090F730 /* 03_MicroComputer2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03_MicroComputer2.swift; sourceTree = "<group>"; };
 		366AC129293CA3270090F730 /* 03_SessionCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03_SessionCode.swift; sourceTree = "<group>"; };
 		366EF71F294DBCFE001A4982 /* 07_SessionCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 07_SessionCode.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				36DC9E5129548F7300294FBC /* 01_SessionCode.swift */,
 				36F6520C29363AE800B3DD37 /* 02_MicroComputer.swift */,
 				363C6ACA28829D7200E49CA4 /* 02_Candidates.swift */,
+				365B41362969F3D300DC566C /* 02_SessionCode.swift */,
 				366AC127293C9C4F0090F730 /* 03_MicroComputer2.swift */,
 				36DC7B48293DFCC70092E366 /* 03_MicroComputer3.swift */,
 				3628D5A12886B05B00FF4E40 /* 03_Mutants.swift */,
@@ -199,6 +202,7 @@
 				364F62C2289171CA00BF4B86 /* 05_MicroComputer4.swift in Sources */,
 				3688574528A28E9300B4F79B /* Addition.swift in Sources */,
 				363C6ACD2882B54500E49CA4 /* Library.swift in Sources */,
+				365B41372969F3D300DC566C /* 02_SessionCode.swift in Sources */,
 				363C6AC92881AD7300E49CA4 /* 01_NimGame.swift in Sources */,
 				36100D11293A1126009536C1 /* 06_SessionCode.swift in Sources */,
 			);
