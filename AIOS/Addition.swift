@@ -77,3 +77,33 @@ class VideoNim: Nim {
         }
     }
 }
+
+// Элементы функционального программирования
+let sampleX = {
+    
+    // MARK: Пример #1
+    
+    let wordLog = ["GHbdtn", "Hello", nil, nil, "ПРювет"]
+    
+    var upperWorlds: [String] = []
+    for word in wordLog {
+        if word != nil {
+            let WORD = word!.uppercased()
+            upperWorlds.append(WORD)
+        }
+    }
+    
+    let filtered = wordLog.compactMap { $0?.uppercased() }
+                          .filter { $0.first == "H"}
+    
+    print(upperWorlds)
+    print(filtered)
+    
+    // MARK: Другие примеры представлены в файле 02_Candidates.swift
+}
+
+// MARK: Extension
+
+extension Int {
+    func square() -> Self { self * self }
+}

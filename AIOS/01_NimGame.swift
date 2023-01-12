@@ -8,15 +8,15 @@
 import Foundation
 
  class Nim {
-     // Абстракция
+     // Пример абстракции
      var heaps = [1, 2, 3, 4, 3, 2, 1]
  }
 
  class BoardPlayer {
-     // Инкапсулация: свойство
+     // Пример инкапсулации: свойство
      let name: String
   
-     // Инкапсулация: метод
+     // Пример инкапсулации: метод
      func turn() -> Bool {
          print(name, terminator: " ")
          return true
@@ -27,7 +27,7 @@ import Foundation
      }
  }
 
- class NimPlayer: BoardPlayer { // Наследование
+ class NimPlayer: BoardPlayer { // Пример наследования
      var nim: Nim?
      
      override func turn() -> Bool {
@@ -74,7 +74,7 @@ import Foundation
          }
          
          isGaming: while true {
-             // Полиморфизм
+             // Пример полиморфизма
              for player in players {
                  let state = game.heaps.filter { $0 > 0 }
                  print("🎲 \(state)")
