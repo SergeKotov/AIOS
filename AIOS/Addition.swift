@@ -101,9 +101,3 @@ let sampleX = {
     
     // MARK: Другие примеры представлены в файле 02_Candidates.swift
 }
-
-// MARK: Extension
-
-extension Int {
-    func square() -> Self { self * self }
-}

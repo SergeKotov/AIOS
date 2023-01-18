@@ -165,7 +165,7 @@ let startups = {
     
     for startup in publicMarket {
         if let number = startup as? Int {
-            print("\nJust make \(number) as \(number.square()) for investments\n\n")
+            print("\nJust make \(number) as \(number.squared) for investments\n\n")
         }
     }
 }
