@@ -101,3 +101,34 @@ let sampleX = {
     
     // MARK: Другие примеры представлены в файле 02_Candidates.swift
 }
+
+/// Ассоциированные значения предназначены для runtime режима.
+/// Можно косвенным образом сделать для них ицициализатор как метод
+/// Вот пример определения и использования:
+let defEnum = {
+    enum Rule {
+        case one(String)
+        case two(String)
+        case no
+        
+        static func get(_ id: Int) -> Self {
+            switch id {
+            case 1: return .one("Никаких правил")
+            case 2: return .two("Смотри правило 1")
+            default:
+                return .no
+            }
+        }
+    }
+
+    print("Введите id для правила 1, 2 или 3:", terminator: " ")
+    let input = Int(readLine()!)!
+    var rule = Rule.get(input)
+
+    switch rule {
+    case .one(let s), .two(let s):
+        print("Мое правило: " + s)
+    default:
+        print("У меня нет такого правила")
+    }
+}

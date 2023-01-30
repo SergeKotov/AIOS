@@ -5,7 +5,46 @@
 //  Created by Serge Kotov on 18.01.2023.
 //
 
+import Foundation
+
 let sample5 = {
+    
+    // MARK: #0 get, set, willSet, didSet, lazy
+    
+    class Circle {
+        lazy var radius = 3.0 {
+            willSet {
+                print("New radius will set to \(newValue)")
+            }
+            didSet {
+                print("New radius did set to \(radius)")
+            }
+        }
+        
+        var area: Double {
+            
+            get { return .pi * pow(self.radius, 2) }
+            
+            set(newArea) {
+                self.radius = sqrt(newArea/Double.pi)
+            }
+
+        }
+        
+        init(radius: Double) {
+            self.radius = radius
+        }
+        
+        func circumference() -> Double {
+            return 2 * Double.pi * radius
+        }
+    }
+
+    let circle = Circle(radius: 3.0)
+    print(circle.radius)
+    print(circle.area)
+    circle.area = 28
+    print(circle.radius)
     
     // MARK: #1 Static properties and methods
 

@@ -23,20 +23,19 @@ struct Task {
 // MARK: - HR
 
 protocol HeadHunting {
-    mutating func getCandidates(people: [Programmer])
-    func fillVacancy(minRating: Int) -> Programmer?
+    func getCandidates(people: [Programmer]) -> [Programmer]
+    func fillVacancy(shortList: [Programmer], minRating: Int) -> Programmer?
 }
 
 extension HeadHunting {
-    mutating func getCandidates(people: [Programmer]) {
-        print("A short list of candidats received.")
+    func getCandidates(people: [Programmer]) -> [Programmer] {
+        print("A short list of candidates with good CV.")
+        return people.filter { $0.cv != nil }
     }
 
-    func fillVacancy(minRating: Int) -> Programmer? {
-        let name = ["Elly", "Dally", "Selly", "Poly", "Dolly", "Mister X", "Sara"].randomElement()!
-        let rating = Int.random(in: 18...60)
-        return rating > minRating ? Programmer(name: name, age: rating) : nil
-
+    func fillVacancy(shortList: [Programmer], minRating: Int) -> Programmer? {
+        let bestCandidate = shortList.randomElement()
+        return bestCandidate
     }
 }
 
@@ -147,7 +146,8 @@ let startups = {
     print("\nStartup market:")
     var startupMarket: [HeadHunting] = [bestHeads, fatherAndMother, digiVision, humanRoboticsInc, roboMenLtd]
     for startup in startupMarket {
-        if let candidate = startup.fillVacancy(minRating: 50) {
+        let list = startup.getCandidates(people: swiftProgrammers)
+        if let candidate = startup.fillVacancy(shortList: list, minRating: 50) {
             print("New star is: \(candidate.name)")
         }
     }
@@ -157,7 +157,8 @@ let startups = {
     var publicMarket: [Any] = [bestHeads, fatherAndMother, digiVision, humanRoboticsInc, roboMenLtd, нетПроблем, justNumber]
     for startup in publicMarket {
         if let headHunting = startup as? HeadHunting {
-            if let candidate = headHunting.fillVacancy(minRating: 30) {
+            let list = headHunting.getCandidates(people: swiftProgrammers)
+            if let candidate = headHunting.fillVacancy(shortList: list, minRating: 30) {
                 print("New star is: \(candidate.name)")
             }
         }

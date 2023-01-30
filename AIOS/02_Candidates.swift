@@ -107,27 +107,28 @@ struct Company: HeadHunting {
     }
 }
 
+struct Person {
+    let name: String
+    let age: Int
+}
+
+let people = [
+    Person(name: "Steve", age: 33),
+    Person(name: "Bill", age: 31),
+    Person(name: "Ada", age: 55),
+    Person(name: "Jon", age: 45),
+    Person(name: "Anna", age: 18)
+]
+
+let swiftProgrammers = people.map { person in Programmer(name: person.name, age: person.age) }
+//var swiftProgrammers = [Programmer]()
+//for guy in people {
+//    let programmer = Programmer(name: guy.name, age: guy.age)
+//    swiftProgrammers.append(programmer)
+//}
+
 // Closure: use candidatesSim() to run the simulation
 let candidatesSim = {
-    struct Person {
-        let name: String
-        let age: Int
-    }
-    
-    let people = [
-        Person(name: "Steve", age: 33),
-        Person(name: "Bill", age: 31),
-        Person(name: "Ada", age: 55),
-        Person(name: "Jon", age: 45),
-        Person(name: "Anna", age: 18)
-    ]
-    
-    let swiftProgrammers = people.map { person in Programmer(name: person.name, age: person.age) }
-    //var swiftProgrammers = [Programmer]()
-    //for guy in people {
-    //    let programmer = Programmer(name: guy.name, age: guy.age)
-    //    swiftProgrammers.append(programmer)
-    //}
     
     for programmer in swiftProgrammers {
         print("CV programmer \(programmer.name)")

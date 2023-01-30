@@ -12,6 +12,7 @@
 		3612C5A92941E7F7009B3399 /* 04_SessionCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3612C5A82941E7F7009B3399 /* 04_SessionCode.swift */; };
 		3617097828A2608C00E73404 /* 09_ DungeonAndErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3617097728A2608C00E73404 /* 09_ DungeonAndErrors.swift */; };
 		361BA5AD289C60F9005CADCF /* 07_OOP_examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361BA5AC289C60F8005CADCF /* 07_OOP_examples.swift */; };
+		361CFE932982C9E500096B3D /* 08_SessionCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361CFE922982C9E500096B3D /* 08_SessionCode.swift */; };
 		3628D5C22886B99800FF4E40 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6AC12881ACDA00E49CA4 /* main.swift */; };
 		3628D5C62886BA5500FF4E40 /* 03_Mutants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3628D5A12886B05B00FF4E40 /* 03_Mutants.swift */; };
 		363C6AC92881AD7300E49CA4 /* 01_NimGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 363C6AC82881AD7300E49CA4 /* 01_NimGame.swift */; };
@@ -50,6 +51,7 @@
 		3612C5A82941E7F7009B3399 /* 04_SessionCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 04_SessionCode.swift; sourceTree = "<group>"; };
 		3617097728A2608C00E73404 /* 09_ DungeonAndErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "09_ DungeonAndErrors.swift"; sourceTree = "<group>"; };
 		361BA5AC289C60F8005CADCF /* 07_OOP_examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 07_OOP_examples.swift; sourceTree = "<group>"; };
+		361CFE922982C9E500096B3D /* 08_SessionCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 08_SessionCode.swift; sourceTree = "<group>"; };
 		3628D5A12886B05B00FF4E40 /* 03_Mutants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03_Mutants.swift; sourceTree = "<group>"; };
 		363C6ABE2881ACDA00E49CA4 /* AIOS */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AIOS; sourceTree = BUILT_PRODUCTS_DIR; };
 		363C6AC12881ACDA00E49CA4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				361BA5AC289C60F8005CADCF /* 07_OOP_examples.swift */,
 				366EF71F294DBCFE001A4982 /* 07_SessionCode.swift */,
 				36A077A728A1A19E00A627A6 /* 08_Startups.swift */,
+				361CFE922982C9E500096B3D /* 08_SessionCode.swift */,
 				3617097728A2608C00E73404 /* 09_ DungeonAndErrors.swift */,
 				36100D0E2939DD45009536C1 /* 09_SessionCode.swift */,
 				363C6ACC2882B54500E49CA4 /* Library.swift */,
@@ -207,6 +210,7 @@
 				3688574528A28E9300B4F79B /* Addition.swift in Sources */,
 				363C6ACD2882B54500E49CA4 /* Library.swift in Sources */,
 				365B41372969F3D300DC566C /* 02_SessionCode.swift in Sources */,
+				361CFE932982C9E500096B3D /* 08_SessionCode.swift in Sources */,
 				363C6AC92881AD7300E49CA4 /* 01_NimGame.swift in Sources */,
 				36100D11293A1126009536C1 /* 06_SessionCode.swift in Sources */,
 			);

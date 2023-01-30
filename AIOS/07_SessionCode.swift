@@ -71,13 +71,18 @@ let sample7 = {
     class ColorPoint: Point {
         var color: CGColor
         
+        override init(x: Float, y: Float) {
+            color = .clear
+            super.init(x: x, y: y)
+        }
+        
         init(x: Float, y: Float, color: CGColor) {
             self.color = color
             super.init(x: x, y: y)
         }
         
         convenience init() {
-            self.init(x: 0, y: 0, color: .clear)
+            self.init(x: 0, y: 0)
         }
     }
     
