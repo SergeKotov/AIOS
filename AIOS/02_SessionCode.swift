@@ -65,7 +65,7 @@ let sample2 = {
 */
     // MARK: #4
     
-    struct Universe { }
+    class Universe { }
         
     enum Anything {
         case name(String)
@@ -74,10 +74,10 @@ let sample2 = {
         case etc
     }
 
-    var artist = Anything.name("Taylor")
-    artist = Anything.name("Swift")
+    var something = Anything.name("Taylor")
+    something = Anything.name("Swift")
 
-    switch artist {
+    switch something {
     case .name(let name):
         print(name)
     default:

@@ -46,42 +46,30 @@ let sample5 = {
     circle.area = 28
     print(circle.radius)
     
-    // MARK: #1 Static properties and methods
+    // MARK: #1 Static properties
 
-    struct LevelTracker {
-        static var highestUnlockedLevel = 1 {
-            willSet {
-                print("highest unlocked level: \(newValue)")
+    class SecretAgent {
+        var name: String
+        
+        static var count = 0 {
+            didSet {
+                let n = "agent" + (count != 1 ? "s" : "")
+                print("The secret service has \(count) \(n)")
             }
         }
         
-        var currentLevel = 1
         
-        static func unlock(_ level: Int) {
-            if level > highestUnlockedLevel {
-                highestUnlockedLevel = level
-            }
-        }
-        
-        // code
-    }
-
-    class Player {
-        var tracker = LevelTracker()
-        let playerName: String
-        func complete(level: Int) {
-            LevelTracker.unlock(level + 1)
-        }
         init(name: String) {
-            playerName = name
+            self.name = name
+            print("New agent is: \(name)")
+            
+            Self.count += 1
         }
-        
-        // code
     }
 
-    var player = Player(name: "Argyrios")
-    print("highest level: \(LevelTracker.highestUnlockedLevel)")
-    player.complete(level: 1)
+    let _ = SecretAgent(name: "J")
+    let _ = SecretAgent(name: "K")
+    let _ = SecretAgent(name: "007")
 
     // MARK: #2 Static properties for enums
     

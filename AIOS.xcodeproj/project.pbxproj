@@ -30,6 +30,7 @@
 		36DC7B49293DFCC70092E366 /* 03_MicroComputer3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC7B48293DFCC70092E366 /* 03_MicroComputer3.swift */; };
 		36DC9E5229548F7300294FBC /* 01_SessionCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC9E5129548F7300294FBC /* 01_SessionCode.swift */; };
 		36F05B53289847EC00CBE3FC /* 06_MicroComputer5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F05B52289847EC00CBE3FC /* 06_MicroComputer5.swift */; };
+		36F4F44F299E354000578DB1 /* 00_DiceGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F4F44E299E354000578DB1 /* 00_DiceGame.swift */; };
 		36F6520D29363AE800B3DD37 /* 02_MicroComputer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F6520C29363AE800B3DD37 /* 02_MicroComputer.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		36DC7B48293DFCC70092E366 /* 03_MicroComputer3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 03_MicroComputer3.swift; sourceTree = "<group>"; };
 		36DC9E5129548F7300294FBC /* 01_SessionCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 01_SessionCode.swift; sourceTree = "<group>"; };
 		36F05B52289847EC00CBE3FC /* 06_MicroComputer5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 06_MicroComputer5.swift; sourceTree = "<group>"; };
+		36F4F44E299E354000578DB1 /* 00_DiceGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 00_DiceGame.swift; sourceTree = "<group>"; };
 		36F6520C29363AE800B3DD37 /* 02_MicroComputer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 02_MicroComputer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				363C6AC12881ACDA00E49CA4 /* main.swift */,
+				36F4F44E299E354000578DB1 /* 00_DiceGame.swift */,
 				363C6AC82881AD7300E49CA4 /* 01_NimGame.swift */,
 				36DC9E5129548F7300294FBC /* 01_SessionCode.swift */,
 				36F6520C29363AE800B3DD37 /* 02_MicroComputer.swift */,
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				366AC12A293CA3270090F730 /* 03_SessionCode.swift in Sources */,
+				36F4F44F299E354000578DB1 /* 00_DiceGame.swift in Sources */,
 				361BA5AD289C60F9005CADCF /* 07_OOP_examples.swift in Sources */,
 				363C6ACB28829D7200E49CA4 /* 02_Candidates.swift in Sources */,
 				366AC128293C9C4F0090F730 /* 03_MicroComputer2.swift in Sources */,
