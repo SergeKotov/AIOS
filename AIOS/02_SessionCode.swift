@@ -9,7 +9,7 @@ import Foundation
 
 let sample2 = {
     
-    // MARK: #1
+    // MARK: #1 Struct example
     
     struct Settings {
         let id: String
@@ -20,7 +20,7 @@ let sample2 = {
 
     settings.version += "new year!"
     
-    // MARK: #2
+    // MARK: #2  Enum example
     
     enum Command {
         case exit
@@ -41,7 +41,7 @@ let sample2 = {
         }
     }
 */
-    // MARK: #3
+    // MARK: #3 Raw values
     
     enum ReadCommand: String {
         case exit = "Exit"
@@ -54,16 +54,17 @@ let sample2 = {
         if let command = ReadCommand(rawValue: readLine()!) {
             switch command {
             case .exit:
-                print("goodbye!")
+                print("goodbye!\n")
                 exit(1)
             default:
-                print("continue...")
-                continue
+                print("This is command: \(command.rawValue)\n")
             }
+        } else {
+            print("continue...\n")
         }
     }
 */
-    // MARK: #4
+    // MARK: #4 Associated values
     
     class Universe { }
         
@@ -84,7 +85,7 @@ let sample2 = {
         break
     }
     
-    // MARK: #5
+    // MARK: #5 Initialization
     
     struct Computer { // or class
         let rom: Int
