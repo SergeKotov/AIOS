@@ -128,8 +128,8 @@ let dangeonsAndErrors = {
             print("You lose")
         } catch DungeonPrize.princeOrPrincess {
             print("You saved the prince / princess.")
-        } catch let error as GameError {
-            print(error.description)
+        } catch let gameError as GameError {
+            print(gameError.description)
         }
         
         print("Would you like to play the next game? [Y, N]")

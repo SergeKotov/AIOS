@@ -1,37 +1,41 @@
-import Foundation
+// Пример кода на языке Swift - игра в кости
+print("Игра в кости\n")
 
-
-print("Press number of session 1...9 to run relevant game or simulation:")
-
-guard let num = Int(readLine() ?? "1") else {
-    print("Press a number from 1 to 9")
-    exit(66)
+// функция, возвращающая целое число от 1 до 6
+func dice() -> Int {
+    return Int.random(in: 1...6)
 }
 
-switch num {
-case 1: nimGame()
-case 2: MicroComputer().runOS()
-case 22: candidatesSim()
-case 3:
-    let mc = MicroComp(ver: "3.0")
-    mc.addProgram(name: "test", program: swiftTest)
-    mc.runOS()
-case 32: mutantBattle()
-case 4: swiftTest()
-case 5:
-    let mc = ProComp(ver: "5.0")
-    mc.addProgram(name: "test", program: swiftTest)
-    mc.powerOn = true
-case 6:
-    let mc = FunComp(ver: "6.0")
-    let dice = { "Throw the dice: 🎲 \(Int.random(in: 1...6))" }
-    mc.upgrade(name: "dice", command: .voidToStr(dice))
-    mc.upgrade(name: "upgrade", command: .computer(upgrade))
-    mc.powerOn = true
-case 7: literature()
-case 8: startups()
-case 9: try? dangeonsAndErrors()
-default:
-    print("Incorrect number. Press a number matched with a session number")
+// переменные - целые числа
+var steveScore = 0
+var billScore = 0
+
+// цикл от 1 до 3
+for i in 1...3 {
+    // интеграция целого числа в строку и ее печать
+    print("Раунд \(i)")
+    
+    // вызов функции - получить очки от броска кубика
+    let steveDice = dice()
+    // печать результата
+    print("Cтив получил \(steveDice) очков")
+    // добавление очков к счету Стива
+    steveScore += steveDice
+    
+    // те же операции для Билла
+    let billDice = dice()
+    print("Билл получил \(billDice) очков")
+    billScore += billDice
 }
 
+// печать пустой строки
+print()
+
+// сравнение итогового счета и печать результата игры
+if steveScore > billScore {
+    print("Стив выиграл!")
+} else if steveScore < billScore{
+    print("Билл выиграл!")
+} else {
+    print("Ничья!")
+}
